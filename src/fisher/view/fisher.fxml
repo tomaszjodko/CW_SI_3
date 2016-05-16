@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<GridPane fx:id="rootNode" alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65" fx:controller="fisher.view.fisherController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <BorderPane prefHeight="505.0" prefWidth="523.0">
+         <top>
+            <HBox prefHeight="40.0" prefWidth="523.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="tfFilePath" editable="false" prefHeight="25.0" prefWidth="381.0" text="File path....">
+                     <HBox.margin>
+                        <Insets left="5.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="btnChooseFile" mnemonicParsing="false" onAction="#chooseFile" prefHeight="25.0" prefWidth="134.0" text="Choose file">
+                     <HBox.margin>
+                        <Insets right="5.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <HBox prefHeight="350.0" prefWidth="523.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextArea fx:id="taInput" editable="false" prefHeight="200.0" prefWidth="200.0" text="Input">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" />
+                     </HBox.margin>
+                  </TextArea>
+                  <TextArea fx:id="taOutput" editable="false" prefHeight="465.0" prefWidth="314.0" text="Output">
+                     <HBox.margin>
+                        <Insets bottom="5.0" right="5.0" />
+                     </HBox.margin>
+                  </TextArea>
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+   </children>
+</GridPane>
